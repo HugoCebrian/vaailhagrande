@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Main from '../components/Main.astro';
 export const prerender = true;
+import directus from '../lib/directus';
+import { readSingleton } from '@directus/sdk';
+
+const global = await directus.request(readSingleton("global"));
 ---
 
 <Layout title="Welcome to Astro.">

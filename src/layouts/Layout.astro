@@ -1,5 +1,4 @@
 ---
-
 import Header from "../components/Header.astro";
 
 interface Props {
@@ -13,9 +12,20 @@ const {
 	description = "This is the desc", 
 	image = "/img/img.jpg"
 } = Astro.props;
-
-
 ---
+
+<script>
+	import Swiper from 'swiper/bundle';
+
+	import 'flowbite';
+
+	const swiper = new Swiper('.swiper', { 
+
+		navigation: {
+			nextEl: '.next',
+			prevEl: '.prev',
+	} });
+</script>
 
 <!doctype html>
 <html lang="en">
@@ -25,16 +35,44 @@ const {
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<script defer src="/js/awesome.js"></script>
+
+		<link rel="stylesheet" href="../../node_modules/swiper/swiper.min.css">
+
+
+
 		<meta name="generator" content={Astro.generator} />
 		<meta property="og:image" content={image}/>
 		<title>{title}</title>
 	</head>
 	<body class="">
+
+		<div class="swiper w-full">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide">Slide 1</div>
+				<div class="swiper-slide">Slide 2</div>
+				<div class="swiper-slide">Slide 3</div>
+				...
+			</div>
+
+			<!-- If we need navigation buttons -->
+			<div class="prev">Prev</div>
+			<div class="next">Next</div>
+		
+
+		</div>
+
 		<Header/>
+
 		<slot />
-		<script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+
+
+
 	</body>
 </html>
+
+
 
 <style>
 .test {
