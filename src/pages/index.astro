@@ -9,11 +9,7 @@ export const prerender = true;
 // const global = await directus.request(readSingleton("global"));
 
 //const response = await fetch('http://137.184.122.253:8055/items/:collection');
-const response = await fetch('http://137.184.122.253:8055/items/test');
-const data = await response.json();
-const randomUser = data.data[0];
 ---
-<h2>{randomUser.test}</h2>
 <Layout title="Welcome to Astro.">
 	<Main>
 		

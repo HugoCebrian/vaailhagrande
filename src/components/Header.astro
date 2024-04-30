@@ -1,3 +1,9 @@
+---
+const response = await fetch('http://137.184.122.253:8055/items/test');
+const data = await response.json();
+const randomUser = data.data[0];
+---
+<h2>{randomUser.test}</h2>
 <header class="h-screen flex flex-col justify-between text-white relative overflow-hidden test">
   <div class="flex items-center justify-between border-b border-white/20 h-24 relative z-50">
     <div class="flex items-center divide-x divide-white/20  h-full">
