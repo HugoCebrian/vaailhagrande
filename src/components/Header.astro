@@ -2,8 +2,17 @@
 const response = await fetch('http://137.184.122.253:8055/items/test');
 const data = await response.json();
 const randomUser = data.data[0];
+
+const res = await fetch('http://137.184.122.253:8055/items/Home_cards');
+const cards = await res.json();
+const card = cards.data[0];
+
+const card_img = "http://137.184.122.253:8055/assets/" + card.img + ".png"
 ---
-<h2>{randomUser.test}</h2>
+<p>{card_img}</p>
+<div class="w-32 h-32 bg-[url(http://137.184.122.253:8055/assets/3ef0a3d8-2afc-4723-b86b-b15d8d44fcde?cache-buster=2024-04-30T20:52:56.329Z&key=system-large-contain)]"></div>
+<img src="http://137.184.122.253:8055/assets/3ef0a3d8-2afc-4723-b86b-b15d8d44fcde?cache-buster=2024-04-30T20:52:56.329Z&key=system-large-contain" alt="">
+<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/133.png" alt="">
 <header class="h-screen flex flex-col justify-between text-white relative overflow-hidden test">
   <div class="flex items-center justify-between border-b border-white/20 h-24 relative z-50">
     <div class="flex items-center divide-x divide-white/20  h-full">
@@ -28,18 +37,18 @@ const randomUser = data.data[0];
       <a href="" class="h-full text-3xl flex items-center justify-center px-6"><i class="fa-brands fa-instagram"></i></a>
     </div>
   </div>
-  <div class="grid md:grid-cols-3 divide-x border-t divide-white/20 border-white/20 relative z-50">
+  <div class={`grid md:grid-cols-3 divide-x border-t divide-white/20 border-white/20 relative z-50 bg-[${card.color2}]`}>
 
     <div class="h-60 p-6 grid items-start group hover:bg-slate-800 transition">
       <div class="flex gap-4">
-        <span class="text-4xl flex items-center"><i class="fa-solid fa-location-dot"></i></span>
+        <span class="text-4xl flex items-center"><i class={card.icon}></i></span>
         <div class="">
           <p class="font-semibold">Expedições</p>
-          <h3 class="font-bold text-2xl">Volta a Ilha Grande</h3>
+          <h3 class="font-bold text-2xl">{card.title}</h3>
         </div>
       </div>
-      <p class="font-light">Embarque em uma emocionante expedição de canoa havaiana, desbravando águas cristalinas e visuais paradisíacos.</p>
-      <a href="" class="font-semibold">Saiba Mais</a>
+      <p class="font-light">{card.paragraph}</p>
+      <a href={card.link} class="font-semibold">Saiba Mais</a>
     </div>
 
     <div class="h-60 p-6 grid items-start group hover:bg-slate-800 transition">
