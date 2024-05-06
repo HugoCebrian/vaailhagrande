@@ -11,13 +11,13 @@ const { title, subtitle, paragraph, icon, link } = Astro.props;
 ---
 
 <div class="h-60 p-6 grid items-start group hover:bg-slate-800 transition">
-      <div class="flex gap-4">
-        <span class="text-4xl flex items-center"><i class={icon} ></i></span>
-        <div class="">
-          <p class="font-semibold">{subtitle}</p>
-          <h3 class="font-bold text-2xl">{title}</h3>
-        </div>
-      </div>
-      <p class="font-light">{paragraph}.</p>
-      <a href={link} class="font-semibold">Saiba Mais</a>
+  <div class="flex gap-4">
+    <span class="text-4xl flex items-center"><i class={icon} ></i></span>
+    <div class="">
+      <p class="font-semibold">{subtitle}</p>
+      <h3 class="font-bold text-2xl">{title}</h3>
     </div>
+  </div>
+  <p class="font-light">{paragraph}.</p>
+  <a href={link} class="font-semibold">Saiba Mais</a>
+</div>

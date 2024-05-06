@@ -3,7 +3,10 @@ import Card from './Card.astro';
 const res = await fetch('http://137.184.122.253:8055/items/Home_cards');
 const cards = await res.json();
 const card = cards.data[0];
+
 ---
+
+
 
 
 <main class=" w-full h-screen flex flex-col relative">
