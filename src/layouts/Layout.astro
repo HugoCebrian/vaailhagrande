@@ -32,9 +32,42 @@
 </html>
 
 <script>
-	import Swiper from 'swiper'
   import 'flowbite';
+  import Swiper from 'swiper'
 
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    freeMode: true,
+    loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    speed: 1000,
+    effect: "fade",
+    breakpoints: {
+      // Quando a largura da tela for 640 pixels ou menos
+      140: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+  });
 </script>
 
 

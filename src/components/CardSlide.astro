@@ -1,0 +1,81 @@
+---
+import Card from "./Card.astro";
+const res = await fetch('http://137.184.122.253:8055/items/Home_cards');
+const cards = await res.json();
+const card = cards.data[0];
+const card2 = cards.data[1];
+const card3 = cards.data[2];
+---
+
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide w-10"> 
+      <Card
+      subtitle='Expedições' 
+      title={card.title} 
+      paragraph='Embarque em uma emocionante expedição de canoa havaiana, desbravando aguas cristalinas e visuais paradisíacos' 
+      icon='fa-solid fa-location-dot' 
+      link=''
+     />   
+    </div>
+    <div class="swiper-slide">   
+      <Card 
+      subtitle='Passeios'
+      title='Conheça a baía' 
+      paragraph='Explore os encantos naturais da Ilha Grande em passeios emocionantes. Desfrute da beleza selvagem deste paraíso tropical!' icon='fa-solid fa-location-dot' 
+      link=''
+     />  
+    </div>
+    <div class="swiper-slide">   
+      <Card 
+      subtitle='Aulas' 
+      title='Saída diária' 
+      paragraph='Receba aulas empolgantes na Ilha Grande. Explore suas águas e belezas naturais com nossos experientes instrutores.' 
+      icon='fa-solid fa-location-dot' 
+      link=''
+     /> 
+    </div>
+
+  <div class="swiper-pagination"></div>
+</div>
+
+
+<script>
+import Swiper from 'swiper'
+
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    freeMode: true,
+    loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    speed: 1000,
+    effect: "fade",
+    breakpoints: {
+      // Quando a largura da tela for 640 pixels ou menos
+      140: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+
+      768: {
+        slidesPerView: 2
+,
+        spaceBetween: 20,
+      },
+
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+  });
+</script>

@@ -1,8 +1,11 @@
 ---
 import Card from './Card.astro';
+import CardSlide from './CardSlide.astro';
 const res = await fetch('http://137.184.122.253:8055/items/Home_cards');
 const cards = await res.json();
-const card = cards.data[0];
+const card1 = cards.data[0];
+const card2 = cards.data[1];
+const card3 = cards.data[2];
 
 ---
 
@@ -10,7 +13,7 @@ const card = cards.data[0];
 
 
 <main class=" w-full h-screen flex flex-col relative">
-  <div class="flex flex-col gap-6 pt-56 container px-10 items-center md:items-start ">
+  <div class="flex flex-col gap-6 pt-56 xl:pt-72 container px-10 items-center md:items-start">
       <h1 class=" hidden md:block text-4xl md:text-7xl leading-loose uppercase font-raleway font-extrabold">
         Reme na Ilha Grande
       </h1>
@@ -20,29 +23,33 @@ const card = cards.data[0];
       <p class="text-xl font-light font-raleway">Aventure-se na Canoa polinésia</p>
   </div>
   
-  <div class="hidden md:grid md:grid-cols-3 divide-x border-t divide-white/20 border-white/20 absolute -bottom-0 z-50 ">
-     <Card 
+  <div class= "mt-40 md:mt-auto ">
+    <div class="lg:hidden border-t divide-white/20 border-white/20 ">
+      <CardSlide>
+    </div>
+
+     <div class="hidden md:hidden lg:grid md:grid-cols-3 divide-x border-t divide-white/20 border-white/20 absolute bottom-0 z-50">
+      <Card
       subtitle='Expedições' 
-      title={card.title} 
+      title={card1.title} 
       paragraph='Embarque em uma emocionante expedição de canoa havaiana, desbravando aguas cristalinas e visuais paradisíacos' 
       icon='fa-solid fa-location-dot' 
       link=''
-     /> 
-     
+     />      
      <Card 
       subtitle='Passeios'
-      title='Conheça a baía' 
+      title=
       paragraph='Explore os encantos naturais da Ilha Grande em passeios emocionantes. Desfrute da beleza selvagem deste paraíso tropical!' icon='fa-solid fa-location-dot' 
       link=''
-     /> 
-    
+     />    
      <Card 
       subtitle='Aulas' 
-      title='Saída diária' 
+      title=
       paragraph='Receba aulas empolgantes na Ilha Grande. Explore suas águas e belezas naturais com nossos experientes instrutores.' 
       icon='fa-solid fa-location-dot' 
       link=''
      /> 
-    </div>
+     </div>
+  </div>
 
 </main>
