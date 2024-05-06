@@ -22,8 +22,8 @@
         <source src="movie.ogg" type="video/ogg">
       </video>
 	
-      <div class=" md:hidden absolute inset-0 bg-cover bg-center h-screen" style="background-image: url('./images/video.png'); -z-50"></div>
-      <div class="absolute inset-0 bg-black opacity-60 md:opacity-0"></div>
+      <div class=" absolute inset-0 bg-cover bg-center h-screen" style="background-image: url('./images/video.png'); -z-50"></div>
+      <div class="absolute inset-0 bg-black opacity-60 md:opacity-40"></div>
       <div class="relative z-10">
         <slot />
       </div>
@@ -33,41 +33,7 @@
 
 <script>
   import 'flowbite';
-  import Swiper from 'swiper'
-
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    freeMode: true,
-    loop: true,
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    speed: 1000,
-    effect: "fade",
-    breakpoints: {
-      // Quando a largura da tela for 640 pixels ou menos
-      140: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-
-      768: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-    },
-  });
+  
 </script>
 
 
