@@ -13,20 +13,20 @@ const card3 = cards.data[2];
 
 
 <main class=" w-full h-screen flex flex-col relative">
-  <div class="flex flex-col gap-6 pt-56 xl:pt-72 container px-10 items-center md:items-start">
-      <h1 class=" hidden md:block text-4xl md:text-7xl leading-loose uppercase font-raleway font-extrabold">
-        Reme na Ilha Grande
-      </h1>
-      <div class="md:hidden flex flex-col items-center">
-        <h1 class="text-7xl uppercase leading-normal font-extrabold font-raleway" >Reme na Ilha Grande</h1>
+  <div class=" h-screen flex flex-col justify-between">
+      <div class=" mt-36 container">
+        <h1 class="self-start place-self-end text-7xl md:text-7xl leading-normal
+        md:leading-loose uppercase font-raleway font-extrabold">
+          Reme na Ilha Grande
+        </h1>
+        <p class="text-xl font-light font-raleway">Aventure-se na Canoa polinésia</p>
       </div>
-      <p class="text-xl font-light font-raleway">Aventure-se na Canoa polinésia</p>
+      <div class="lg:hidden border-t divide-white/20 border-white/20  flex items-center justify-center ">
+        <CardSlide/>
+      </div>
   </div>
   
   <div class= " md:mt-auto ">
-    <div class="lg:hidden border-t divide-white/20 border-white/20 ">
-      <CardSlide>
-    </div>
 
      <div class="hidden md:hidden lg:grid md:grid-cols-3 divide-x border-t divide-white/20 border-white/20 absolute bottom-0 z-50">
       <Card
