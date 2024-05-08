@@ -1,8 +1,22 @@
+---
+interface Props {
+  data: string;
+	subtitle: string;
+	link: string;
+	title: string;
+	paragraph: string;
+}
+
+const { title, subtitle, paragraph, link, data } = Astro.props;
+---
+
+
+
 <div class="flex flex-col gap-4"> 
-  <div class="grid h-80 bg-cover bg-center bg-[url('./images/dji1.JPG')] rounded-">
-    <div class="self-start place-self-end m-4 p-2 bg-[#191D31] rounded-md font-bold">10/10/2024</div>
+  <div class="grid h-80 bg-cover bg-center bg-[url('./images/dji1.JPG')] rounded-sm">
+    <div class="self-start place-self-end m-4 p-2 bg-[#191D31] rounded-md font-bold">{data}</div>
     <div class="self-end flex">
-      <div class="bg-[#191D31] w-10/12 p-2 py-4">Test</div>
+      <div class="bg-[#191D31] w-10/12 p-2 py-4">{subtitle}</div>
       <div class="bg-blue-500 w-2/12 p-2 py-4 flex items-center justify-center text-2xl">
         <i class="fa-solid fa-chevron-right"></i>
       </div>
@@ -10,8 +24,8 @@
   </div>
 
   <div class="font-raleway flex flex-col gap-2 text-[#262626]">
-    <h1 class="text-3xl font-extrabold">Lorem</h1>
-    <p class="font-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, voluptatibus.</p>
+    <h1 class="text-3xl font-extrabold">{title}</h1>
+    <p class="font-light">{paragraph}</p>
   </div>
 
 </div>
