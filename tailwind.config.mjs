@@ -22,7 +22,7 @@ export default {
 			colors: {
 				text: '#373737',
 				second: '#EB3850',
-				shape: '#3333',
+				shape: '#191D31',
 			},
 		},
 	},
