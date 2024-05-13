@@ -2,9 +2,11 @@
 import PasseiosCard from "./PasseiosCard.astro";
 ---
 
-<section class="py-20 flex flex-col items-center gap-10">
+<section class="py-20 flex flex-col items-center gap-10 relative">
+  <div class="absolute w-full h-full -z-10 bg-center bg-cover bg-[url('/images/')]"></div>
   <div>
-    <h1 class="font-extrabold text-[#191D31] text-4xl uppercase">Passeios</h1>
+    <h1 class=" font-extrabold text-[#191D31] text-4xl uppercase">Passeios</h1>
+    <div class="w-full h-1 rounded-md mt-2 bg-shape"></div>
   </div>
 
   <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
