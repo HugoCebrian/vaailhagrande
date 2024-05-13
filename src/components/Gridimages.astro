@@ -1,4 +1,12 @@
+---
+interface Props {
+	image: string;
+}
+
+const {image} = Astro.props;
+---
+
 
 <div class=""> 
-    <div class=" h-52 bg-cover bg-center bg-[url('/images/video.png')]"></div>
+    <div class=" h-52 bg-cover bg-center" style={{backgroundImage: `url('/images/${image}')`}}></div>
   </div>
