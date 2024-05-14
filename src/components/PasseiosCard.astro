@@ -1,12 +1,12 @@
 ---
 interface Props {
   data: string;
-	subtitle: string;
+	title: string;
 	link: string;
 	image: string;
 }
 
-const {subtitle, link, data, image} = Astro.props;
+const {title, link, data, image} = Astro.props;
 ---
 
 
@@ -14,11 +14,11 @@ const {subtitle, link, data, image} = Astro.props;
 <div class="flex flex-col gap-4"> 
   <div class="grid h-80 bg-cover bg-center" style={{backgroundImage: `url('/images/${image}')`}}>
 
-    <div class="self-start place-self-end m-4 p-2 bg-[#191D31] font-semibold">{data}</div>
+    <div class="self-start place-self-end m-4 p-2 px-4 bg-[#191D31] font-semibold font-roboto">{data}</div>
     <div class="self-end flex">
-      <div class="backdrop-blur w-10/12 p-2 py-3 px-4 font-bold">{subtitle}</div>
+      <div class="backdrop-blur w-10/12 p-2 py-3 px-4 font-bold">{title}</div>
       <div class="bg-[#191D31] w-2/12 p-2 py-3 flex items-center justify-center text-2xl">
-        <i class="fa-solid fa-chevron-right"></i>
+        <a href={link}><i class="fa-solid fa-chevron-right"></i></a>
       </div>
     </div>
   </div>
