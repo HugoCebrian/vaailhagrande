@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import minhaImagem from "../../public/images/dj2.jpg";
+import Imagem1 from "../../public/images/dj2.jpg";
 ---
 
 
 <section class="grid md:grid-cols-2 md:grid-row-2">
-  <div class="relative">
-    <div class="px-4 py-14 md:p-20 xl:p-32 flex flex-col relative gap-10">
+  <div class="relative" >
+    <div class="px-4 py-14 md:p-20 xl:p-32 flex flex-col relative gap-6">
 
-      <div class="text-shape flex flex-col gap-4">
+      <div class="text-shape flex flex-col gap-4" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
         <div class=" flex flex-col items-center text-center md:items-start md:text-start gap-4">
           <div class="">
             <p class="font-semibold text-md">Expedições</p>
@@ -19,7 +19,7 @@ import minhaImagem from "../../public/images/dj2.jpg";
         
       </div>
   
-      <div class="flex flex-wrap gap-4">
+      <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
   
         <div class="flex items-center bg-shape text-white gap-4 px-2 md:px-4 py-3">
           <span class="text-white text-xl">
@@ -64,12 +64,13 @@ import minhaImagem from "../../public/images/dj2.jpg";
         </div>
   
       </div>
-      <a href="" class="bg-red-500 hover:bg-red-700 transition-all mt-4 p-3 flex justify-center text-white font-bold uppercase w-48 ">Garanta sua vaga</a>
+     
+      <a href="" class="bg-red-500 hover:bg-red-700 transition-all p-3 flex justify-center text-white font-bold uppercase w-48" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">Garanta sua vaga</a>
   
     </div>
   </div>
   
-  <Image src={minhaImagem} alt="Uma descrição da minha imagem." class="hidden md:block object-cover object-center h-full"/>
+  <Image src={Imagem1} alt="Uma descrição da minha imagem." class="hidden md:block object-cover object-center h-full" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000"/>
 
 </section>
 
