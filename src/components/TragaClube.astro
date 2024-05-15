@@ -1,6 +1,12 @@
+---
+import { Image } from "astro:assets";
+import minhaImagem from "../../public/images/dj4.jpg";
+---
+
+
 <section class="grid md:grid-cols-2 md:grid-row-2 items-center">
     
-  <div class="bg-[url('/images/dj4.jpg')] bg-center bg-cover hidden h-[40rem] md:block"></div>
+  <Image src={minhaImagem} alt="Uma descrição da minha imagem." class="hidden md:block object-cover object-center h-full"/>
   
   <div class="relative h-full flex items-center">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent to-shape opacity-5"></div>
