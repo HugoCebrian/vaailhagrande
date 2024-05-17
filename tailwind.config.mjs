@@ -23,6 +23,7 @@ export default {
 				text: '#373737',
 				second: '#EB3850',
 				shape: '#191D31',
+				lime: '#228B22',
 			},
 		},
 	},

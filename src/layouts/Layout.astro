@@ -21,14 +21,13 @@
      
       <div class="absolute z-10 inset-0 bg-gradient-to-b from-gray-950/80 via-gray-950/10 to-gray-950/80"></div>
       
-      <video muted loop class="hidden md:block absolute inset-0 w-screen h-screen object-cover -z-40" poster="/images/video.png">
+      <video  muted loop class="hidden md:block absolute inset-0 w-screen h-screen object-cover -z-40" poster="/images/video.png">
         <source class="hidden"  src="https://www.goinitium.com/wp-content/uploads/2024/04/DJI-0615.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg">
       </video>
 	
       <div class=" md:hidden absolute inset-0 bg-cover bg-center h-screen" style="background-image: url('./images/video.png'); -z-50"></div>
-      
-      <div class="absolute inset-0 bg-black opacity-60 md:opacity-40"></div>
+             <div class="absolute inset-0 bg-black opacity-60 md:opacity-40"></div>
       
       <div class="relative z-10">
         <slot />
@@ -44,7 +43,26 @@
   // ..
   AOS.init();
 
+  function scrollToSection(event: MouseEvent): void {
+    const targetId: string | null = (event.target as HTMLAnchorElement).getAttribute('href');
+    const targetSection: HTMLElement | null = document.querySelector(targetId || '');
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  }
 
+  // Adiciona um ouvinte de evento de clique a todos os links no menu de navegação
+  const navLinks: NodeListOf<HTMLAnchorElement> | null = document.querySelectorAll('nav a');
+  if (navLinks) {
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(event: MouseEvent): void {
+        event.preventDefault(); // Previne o comportamento padrão do link
+        scrollToSection(event); // Chama a função para rolar a página
+      });
+    });
+  }
 
 
 </script>

@@ -1,10 +1,10 @@
 ---
 import Card from "./Card.astro";
-const res = await fetch('http://137.184.122.253:8055/items/Home_cards');
-const cards = await res.json();
-const card = cards.data[0];
-const card2 = cards.data[1];
-const card3 = cards.data[2];
+//const res = await fetch('http://137.184.122.253:8055/items/Home_cards');
+//const cards = await res.json();
+//const card = cards.data[0];
+//const card2 = cards.data[1];
+//const card3 = cards.data[2];
 ---
 
 <div class="swiper mySwiper">
@@ -12,7 +12,7 @@ const card3 = cards.data[2];
     <div class="swiper-slide w-10"> 
       <Card
       subtitle='Expedições' 
-      title={card.title} 
+      title='Conheça a baía'
       paragraph='Embarque em uma emocionante expedição de canoa havaiana, desbravando aguas cristalinas e visuais paradisíacos' 
       icon='fa-solid fa-sailboat' 
       link=''

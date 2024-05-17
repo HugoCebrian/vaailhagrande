@@ -1,9 +1,12 @@
 ---
-import { Image } from "astro:assets";
-import minhaImagem from "../../public/images/dj4.jpg";
+interface Props {
+	image: string;
+}
+
+const {image} = Astro.props;
 ---
 
 
 <div class=""> 
-  <Image src={minhaImagem} alt="Uma descrição da minha imagem." class=" object-cover object-center h-full"/>
+    <div class=" h-52 bg-cover bg-center" style={{backgroundImage: `url('/images/${image}')`}}></div>
   </div>
