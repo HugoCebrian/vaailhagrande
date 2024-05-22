@@ -1,52 +1,57 @@
 ---
 import PasseiosCard from "./PasseiosCard.astro";
-import minhaImagem from "../../public/images/dj4.jpg";
-import D from "../../public/images/dj2.jpg";
 ---
 
-<section class="py-20 flex flex-col items-center gap-10 relative bg-white/90">
-  <div>
-    <h1 class=" font-extrabold text-[#191D31] text-4xl uppercase">Expedições</h1>
-    <div class="w-full h-1 rounded-md mt-2 bg-shape"></div>
-  </div>
+<section class="relative bg-shape">
 
-  <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-    <PasseiosCard 
-    data="30/05/2024" 
-    title="Volta Ilha Grande" 
-    link="" 
-    image="dj2.png"
-    />
-    <PasseiosCard 
-    data="30/05/2024" 
-    title="Volta Ilha Grande" 
-    link="" 
-    image="dj2.png"
-    />
-    <PasseiosCard 
-    data="30/05/2024" 
-    title="Volta Ilha Grande" 
-    link="" 
-    image="dj2.png"
-    />
-    <PasseiosCard 
-    data="30/05/2024" 
-    title="Volta Ilha Grande" 
-    link="" 
-    image="dj2.png"
-    />
-    <PasseiosCard 
-    data="30/05/2024" 
-    title="Volta Ilha Grande" 
-    link="" 
-    image="dj2.png"
-    />
-    <PasseiosCard 
-    data="30/05/2024" 
-    title="Volta Ilha Grande" 
-    link="" 
-    image="dj2.png"
-    />
-    
+  <div class="bg-black bg-center bg-cover w-full h-full absolute -z-10 opacity-70"></div>
+  <div class="bg-[url('/images/blur.png')] bg-center bg-cover w-full h-full absolute -z-20 back"></div>
+  
+
+  <div class="flex flex-col items-center gap-10 py-20">
+    <div class="">
+      <h1 class=" font-extrabold text-white text-4xl uppercase">Expedições</h1>
+      <div class="w-full h-1 rounded-md mt-2 bg-white"></div>
+    </div>
+  
+    <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <PasseiosCard 
+      data="30/05/2024" 
+      title="Volta Ilha Grande" 
+      link="" 
+      image="dj2.png"
+      />
+      <PasseiosCard 
+      data="30/05/2024" 
+      title="Volta Ilha Grande" 
+      link="" 
+      image="dj2.png"
+      />
+      <PasseiosCard 
+      data="30/05/2024" 
+      title="Volta Ilha Grande" 
+      link="" 
+      image="dj2.png"
+      />
+      <PasseiosCard 
+      data="30/05/2024" 
+      title="Volta Ilha Grande" 
+      link="" 
+      image="dj2.png"
+      />
+      <PasseiosCard 
+      data="30/05/2024" 
+      title="Volta Ilha Grande" 
+      link="" 
+      image="dj2.png"
+      />
+      <PasseiosCard 
+      data="30/05/2024" 
+      title="Volta Ilha Grande" 
+      link="" 
+      image="dj2.png"
+      />
+      
+    </div>
   </div>
 </section>

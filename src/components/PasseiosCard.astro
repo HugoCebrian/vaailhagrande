@@ -14,8 +14,8 @@ const {title, link, data, image} = Astro.props;
 
     <div class="self-start place-self-end m-4 p-2 px-4 bg-[#191D31] font-semibold font-roboto">{data}</div>
     <div class="self-end flex">
-      <div class="backdrop-blur w-10/12 p-2 py-3 px-4 font-bold">{title}</div>
-      <div class="bg-[#191D31] w-2/12 p-2 py-2 flex items-center justify-center text-2xl">
+      <div class="text-shape bg-white w-10/12 p-2 py-3 px-4 font-bold">{title}</div>
+      <div class="text-[#191D31] bg-white border-l-[3px] border-shape w-2/12 p-2 py-2 flex items-center justify-center text-2xl">
         <a href={link}><i class="fa-solid fa-chevron-right"></i></a>
       </div>
     </div>
