@@ -1,0 +1,42 @@
+<div class="swiper mySwiper1">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide bg-[url('/images/dj1.png')] w-full h-[30rem] bg-cover bg-center"></div>
+    <div class="swiper-slide bg-[url('/images/dj2.png')] w-full h-[30rem] bg-cover bg-center"></div>
+    <div class="swiper-slide bg-[url('/images/dj3.png')] w-full h-[30rem] bg-cover bg-center"></div>
+    <div class="swiper-slide bg-[url('/images/dj4.png')] w-full h-[30rem] bg-cover bg-center"></div>
+  </div>
+
+  <div class="swiper-pagination"></div>
+</div>
+
+<script>
+  import Swiper from 'swiper/bundle'
+
+  var swiper1 = new Swiper(".mySwiper1", {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+      delay: 3000, // Aumentando o atraso para 3 segundos
+      disableOnInteraction: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    speed: 2000,
+
+    
+    
+  });
+
+  
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowLeft') {
+      swiper1.slidePrev();
+    } else if (event.key === 'ArrowRight') {
+      swiper1.slideNext();
+    }
+  });
+</script>

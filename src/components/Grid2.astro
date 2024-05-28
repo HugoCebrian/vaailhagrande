@@ -1,12 +1,61 @@
----
-interface Props {
-	image: string;
-}
-
-const {image} = Astro.props;
----
 
 
-<div class=""> 
-    <div class=" h-52 bg-cover bg-center" style={{backgroundImage: `url('/images/${image}')`}}></div>
+
+<div class="swiper mySwiper2">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide bg-[url('/images/dj1.png')] w-full h-40 bg-cover bg-center"></div>
+    <div class="swiper-slide bg-[url('/images/dj1.png')] w-full h-40 bg-cover bg-center"></div>
+    <div class="swiper-slide bg-[url('/images/dj1.png')] w-full h-40 bg-cover bg-center"></div>
+    <div class="swiper-slide bg-[url('/images/dj1.png')] w-full h-40 bg-cover bg-center"></div>
+    <div class="swiper-slide bg-[url('/images/dj1.png')] w-full h-40 bg-cover bg-center"></div>
+    <div class="swiper-slide bg-[url('/images/dj1.png')] w-full h-40 bg-cover bg-center"></div>
+    <div class="swiper-slide bg-[url('/images/dj1.png')] w-full h-40 bg-cover bg-center"></div>
+    <div class="swiper-slide bg-[url('/images/dj1.png')] w-full h-40 bg-cover bg-center"></div>
   </div>
+</div>
+
+<script>
+  import Swiper from 'swiper/bundle'
+
+  var swiper1 = new Swiper(".mySwiper2", {
+    slidesPerView: 6,
+    loop: true,
+    autoplay: {
+      delay: 1000, // Aumentando o atraso para 3 segundos
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    speed: 4000,
+
+    breakpoints: {
+      // Quando a largura da tela for 640 pixels ou menos
+      140: {
+        slidesPerView: 2,
+      },
+
+      768: {
+        slidesPerView: 4,
+      },
+
+      1024: {
+        slidesPerView: 6,
+      },
+    },
+    
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowLeft') {
+      swiper1.slidePrev();
+    } else if (event.key === 'ArrowRight') {
+      swiper1.slideNext();
+    }
+  });
+</script>
+
+
+  

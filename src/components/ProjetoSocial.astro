@@ -1,66 +1,42 @@
 ---
-//import { Image } from "astro:assets";
-//import Imagem from "../../public/images/TESTE.png";
+import SocialCard from "./SocialCard.astro";
+import SlideSocial from "./SlideSocial.astro";
 ---
 
+<section class="bg-white">
 
-<section id="tragaseuclube" class="grid md:grid-cols-2 md:grid-row-2 items-center">
-    
-  
-  
-  <div class="relative h-full flex items-center px-2 md:px-6">
-  
-    <div class="flex flex-col justify-center items-center gap-4 w-full h-full py-20">
-      <div class="flex flex-col justify-center h-full  gap-10 ">
-  
-        <div class="text-shape flex flex-col gap-4 items-center text-center md:items-start">
-            <h2 class="text-4xl md:text-5xl font-extrabold" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Traga seu Clube</h2>
-        </div>
-  
-        <div class="">
-          <div class="flex flex-col md:flex-col lg:flex-row gap-6" >
-            
-            <div class="bg-shape py-6 grid gap-4 justify-center items-center px-10 md:px-4 w-full xl:w-80 xl:h-52">
-    
-              <div class="flex justify-center gap-4 ">
-                <span class="text-3xl xl:text-4xl text-white">
-                  <i class="fa-solid fa-building"></i>
-                </span>
-                <h3 class="text-2xl xl:text-3xl font-raleway font-bold text-white">Empresas</h3>
-              </div>
-    
-              <div class="w-full flex">
-                <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, numquam.</p>
-              </div>
-            </div>
-    
-            <div class="bg-shape py-6 grid gap-4 justify-center items-center text-center px-10 md:px-4 w-full xl:w-80 xl:h-52">
-    
-              <div class="flex items-center justify-center gap-4">
-                <span class="text-2xl xl:text-4xl text-white">
-                  <i class="fa-solid fa-users"></i>
-                </span>
-                <h3 class="text-2xl xl:text-3xl font-raleway font-bold text-white">Clubes</h3>
-              </div>
-    
-              <div class="w-full flex">
-                <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, numquam.</p>
-              </div>
-            
-            </div>
-
-          </div>
-          <div class="w-full">
-            <a href="" class="bg-red-500 hover:bg-red-700  transition-all p-3 mt-4 flex justify-center text-white font-bold uppercase w-40" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">Agende Já</a>
-          </div>
-          
-        </div>
-  
+    <div class="w-full flex flex-col lg:flex-row justify-between h-full relative py-20 px-4 lg:px-20">
+      
+      <div class="flex flex-col items-center md:items-start gap-6">
+        <h1 class="text-4xl lg:text-5xl font-extrabold text-text">Projeto Social</h1>
+        <p class=" text-text lg:w-[32rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, blanditiis voluptatem? Deleniti ut cumque unde!</p>
       </div>
+      
+      <div class=" lg:w-[28rem] lg:h-[28rem] bg-red-100">
+        <SlideSocial/>
+      </div>
+      
     </div>
-
+    
+    <div class=" grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-12 gap-8 hidden">
+      <SocialCard 
+      title="Ilha Grande"
+      paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam dolore voluptate aliquam voluptatem reiciendis reprehenderit velit atque rerum eaque." 
+      image="dj2.png"
+      />
+      <SocialCard 
+      title="Ilha Grande"
+      paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam dolore voluptate aliquam voluptatem reiciendis reprehenderit velit atque rerum eaque." 
+      image="dj2.png"
+      />
+      <SocialCard 
+      title="Ilha Grande"
+      paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam dolore voluptate aliquam voluptatem reiciendis reprehenderit velit atque rerum eaque." 
+      image="dj2.png"
+      />
+      
+    </div>
   </div>
+</section>
 
-  <div class="bg-[url('/images/dj2.png')] bg-center bg-cover h-full"></div>
-  
-</section>  
+
