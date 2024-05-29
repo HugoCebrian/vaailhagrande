@@ -1,11 +1,10 @@
-<div class="swiper mySwiper1">
+<div class="swiper mySwiper1 h-96 lg:h-[26rem]">
   <div class="swiper-wrapper">
     <div class="swiper-slide bg-[url('/images/dj1.png')] w-full bg-cover bg-center"></div>
     <div class="swiper-slide bg-[url('/images/dj2.png')] w-full bg-cover bg-center"></div>
     <div class="swiper-slide bg-[url('/images/dj3.png')] w-full bg-cover bg-center"></div>
     <div class="swiper-slide bg-[url('/images/dj4.png')] w-full bg-cover bg-center"></div>
   </div>
-
   <div class="swiper-pagination"></div>
 </div>
 
@@ -25,6 +24,11 @@
       dynamicBullets: true,
     },
     speed: 2000,
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
 
     
     

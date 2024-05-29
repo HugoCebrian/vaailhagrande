@@ -5,38 +5,40 @@ import SlideSocial from "./SlideSocial.astro";
 
 <section class="bg-white">
 
-    <div class="w-full flex flex-col lg:flex-row justify-between h-full relative  px-4 lg:px-20">
+    <div class="w-full flex flex-col lg:flex-row justify-between relative px-4 py-20 md:p-20 lg:p-20 gap-6 lg:gap-0">
       
       <div class="flex flex-col items-center md:items-start gap-6">
         <h1 class="text-4xl lg:text-5xl font-extrabold text-text">Projeto Social</h1>
         <p class=" text-text lg:w-[32rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, blanditiis voluptatem? Deleniti ut cumque unde!</p>
       </div>
       
-      <div class=" lg:w-4/12 lg:h-[28rem] bg-red-100">
+      <div class="w-12/12 lg:w-6/12 bg-red-100 relative">
+        <div id="border" class="w-40 h-20 absolute border-4 border-orange -mt-[0.12rem] -mr-[0.12rem] right-0 animate-border"></div>
+        <div class="w-40 h-20 absolute border-4 border-orange bottom-0 left-0 -mb-[0.12rem] -ml-[0.12rem]"></div>
         <SlideSocial/>
       </div>
       
     </div>
     
-    <div class=" grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-12 gap-8 hidden">
-      <SocialCard 
-      title="Ilha Grande"
-      paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam dolore voluptate aliquam voluptatem reiciendis reprehenderit velit atque rerum eaque." 
-      image="dj2.png"
-      />
-      <SocialCard 
-      title="Ilha Grande"
-      paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam dolore voluptate aliquam voluptatem reiciendis reprehenderit velit atque rerum eaque." 
-      image="dj2.png"
-      />
-      <SocialCard 
-      title="Ilha Grande"
-      paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam dolore voluptate aliquam voluptatem reiciendis reprehenderit velit atque rerum eaque." 
-      image="dj2.png"
-      />
-      
-    </div>
   </div>
 </section>
 
+
+<div class=" grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-12 gap-8 hidden">
+  <SocialCard 
+  title="Ilha Grande"
+  paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam dolore voluptate aliquam voluptatem reiciendis reprehenderit velit atque rerum eaque." 
+  image="dj2.png"
+  />
+  <SocialCard 
+  title="Ilha Grande"
+  paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam dolore voluptate aliquam voluptatem reiciendis reprehenderit velit atque rerum eaque." 
+  image="dj2.png"
+  />
+  <SocialCard 
+  title="Ilha Grande"
+  paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam dolore voluptate aliquam voluptatem reiciendis reprehenderit velit atque rerum eaque." 
+  image="dj2.png"
+  />
+</div>
 
