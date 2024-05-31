@@ -9,7 +9,7 @@ interface Props {
 const {title, link, data, image} = Astro.props;
 ---
 
-<div class="flex flex-col gap-4 w-full shadow-xl"> 
+<div class="flex flex-col gap-4 w-full shadow-xl hidden"> 
   <div class="grid h-80 bg-cover bg-center" style={{backgroundImage: `url('/images/${image}')`}}>
 
     <div class="self-start place-self-end p-2 px-4 bg-orange font-semibold font-roboto text-sm">{data}</div>
@@ -21,6 +21,65 @@ const {title, link, data, image} = Astro.props;
         </a>
       </div>
     </div>
+  </div>
+
+</div>
+
+
+<div class="flex flex-col gap-4 w-full shadow-xl group hidden"> 
+  <div class="grid h-[30rem] bg-cover bg-center relative overflow-hidden" style={{backgroundImage: `url('/images/${image}')`}}>
+
+    <div class="self-start place-self-end p-2 px-4 bg-black/60 font-semibold">{data}</div>
+
+    <a href="" class="absolute -bottom-[10.5rem] md:group-hover:bottom-0 transition-all duration-300 ease-out text-offwhite">
+
+      <div class="flex justify-between bg-black/70 font-bold uppercase">
+        <p class="p-4">Test</p>
+        <span class="flex justify-center items-center text-[1.2rem] bg-white/20 p-4">
+          <i class="fa-solid fa-chevron-right"></i>
+        </span>
+      </div>
+
+      <div class="p-6 bg-black/60 hidden">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ea laboriosam quis non quam quasi? Amet numquam nobis doloremque culpa provident, sunt animi totam earum aliquid obcaecati. Totam, commodi eos!
+      </div>
+
+      <div class="p-6 bg-offwhite text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ea laboriosam quis non quam quasi? Amet numquam nobis doloremque culpa provident, sunt animi totam earum aliquid obcaecati. Totam, commodi eos!
+      </div>
+
+    </a>
+
+
+  </div>
+
+</div>
+
+
+
+<div class="flex flex-col gap-4 w-full shadow-xl group overflow overflow-hidden"> 
+  <div class="grid h-[30rem] bg-cover bg-center relative">
+
+    <div class="absolute inset-0 group-hover:scale-125 bg-center bg-cover transition-all duration-300 group-hover:blur-[1px]" style={{backgroundImage: `url('/images/${image}')`}}></div>
+
+    <div class="self-start place-self-end m-4 p-2 px-4 bg-orange shadow-xl font-semibold text-white relative z-50">{data}</div>
+
+    <a href="" class="self-end relative z-50 transition-all duration-300 ease-out text-offwhite">
+
+      <div class="flex justify-between font-bold uppercase">
+        <p class="flex-grow p-4 bg-orange/90">Volta a Ilha Grande</p>
+        <span class="flex justify-center items-center text-[1.2rem] bg-gray-100 text-orange p-4 ">
+          <i class="fa-solid fa-chevron-right"></i>
+        </span>
+      </div>
+
+      <div class="px-6 bg-offwhite text-gray-700 max-h-0 group-hover:max-h-96 group-hover:py-6 transition-all duration-500 ease-out">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ea laboriosam quis non quam quasi? Amet numquam nobis doloremque culpa provident, sunt animi totam earum aliquid obcaecati. Totam, commodi eos!
+      </div>
+
+    </a>
+
+
   </div>
 
 </div>
