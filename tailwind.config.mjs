@@ -25,7 +25,7 @@ export default {
 				shape: '#191D31',
 				orange: '#FF3D0C',
 				offwhite: '#F7F7F7',
-				green: '#5FA880',
+				green: '#228b22',
 			},
 		},
 	},
