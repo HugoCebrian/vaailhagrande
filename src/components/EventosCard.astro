@@ -9,14 +9,16 @@ interface Props {
 const {title, link, data, image} = Astro.props;
 ---
 
-<div class="flex flex-col gap-4 w-full"> 
+<div class="flex flex-col gap-4 w-full shadow-xl"> 
   <div class="grid h-80 bg-cover bg-center" style={{backgroundImage: `url('/images/${image}')`}}>
 
-    <div class="self-start place-self-end m-4 p-2 px-4 bg-green font-semibold font-roboto">{data}</div>
+    <div class="self-start place-self-end p-2 px-4 bg-orange font-semibold font-roboto text-sm">{data}</div>
     <div class="self-end flex">
-      <div class="text-shape bg-white w-10/12 p-2 py-3 px-4 font-bold">{title}</div>
-      <div class="text-white bg-green w-2/12 p-2 py-2 flex items-center justify-center text-2xl">
-        <a class=" flex justify-center items-center" href={link}><i class=" fa-solid fa-chevron-right"></i></a>
+      <div class="text-white bg-black/60 w-auto flex-grow p-2 py-4 px-4 font-semibold">{title}</div>
+      <div class="text-white bg-orange w-[38px] p-2 py-2 flex items-center justify-center text-2xl">
+        <a class=" flex justify-center items-center text-[1.2rem]" href={link}>
+          <i class=" fa-solid fa-chevron-right"></i>
+        </a>
       </div>
     </div>
   </div>
