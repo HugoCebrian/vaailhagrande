@@ -1,4 +1,4 @@
-<header class="flex flex-col justify-between text-white w-full absolute md:overflow-hidden uppercase">
+<header id="header" class="flex flex-col justify-between text-white w-full absolute md:overflow-hidden uppercase">
   
   <div class="flex items-center justify-between border-b border-white/20 h-24 relative z-50">
     <div class="flex justify-between flex-wrap md:flex-nowrap items-center h-full w-full   md:w-auto divide-x divide-white/20">
@@ -40,15 +40,21 @@
 
 <script>
 
-   // JavaScript to toggle menu visibility
-   const menuBtn = document.getElementById('btn');
-const menu = document.getElementById('menu');
-
-menuBtn?.addEventListener('click', () => {
-  console.log('Botão de menu clicado');
-  menu?.classList.toggle('hidden');
-});
+  
 
 </script>
 
 
+<style>
+  .fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Garante que o cabeçalho fixo fique acima de outros elementos */
+  transition: top 0.10s ease; /* Adiciona uma transição suave quando o cabeçalho se torna fixo */
+}
+
+
+
+</style>

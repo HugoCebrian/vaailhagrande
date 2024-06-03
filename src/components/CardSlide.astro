@@ -37,12 +37,11 @@ import Card from "./Card.astro";
      /> 
     </div>
 
-  <div class="swiper-pagination"></div>
 </div>
 
 
 <script>
-import Swiper from 'swiper'
+import Swiper from 'swiper/bundle'
 
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
@@ -50,15 +49,14 @@ import Swiper from 'swiper'
     freeMode: true,
     loop: true,
     autoplay: {
-      delay: 1000,
+      delay: 3000,
       disableOnInteraction: false,
     },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    speed: 1000,
-    effect: "fade",
+    speed: 4000,
     breakpoints: {
       // Quando a largura da tela for 640 pixels ou menos
       140: {

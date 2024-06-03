@@ -9,7 +9,7 @@ interface Props {
 const {title, link, data, image} = Astro.props;
 ---
 
-<div class="flex flex-col gap-4 w-full shadow-xl hidden"> 
+<div class="flex-col gap-4 w-full shadow-xl hidden"> 
   <div class="grid h-80 bg-cover bg-center" style={{backgroundImage: `url('/images/${image}')`}}>
 
     <div class="self-start place-self-end p-2 px-4 bg-orange font-semibold font-roboto text-sm">{data}</div>
@@ -26,7 +26,7 @@ const {title, link, data, image} = Astro.props;
 </div>
 
 
-<div class="flex flex-col gap-4 w-full shadow-xl group hidden"> 
+<div class="flex-col gap-4 w-full shadow-xl group hidden"> 
   <div class="grid h-[30rem] bg-cover bg-center relative overflow-hidden" style={{backgroundImage: `url('/images/${image}')`}}>
 
     <div class="self-start place-self-end p-2 px-4 bg-black/60 font-semibold">{data}</div>
@@ -60,7 +60,7 @@ const {title, link, data, image} = Astro.props;
 <div class="flex flex-col gap-4 w-full shadow-xl group overflow overflow-hidden"> 
   <div class="grid h-[30rem] bg-cover bg-center relative">
 
-    <div class="absolute inset-0 group-hover:scale-125 bg-center bg-cover transition-all duration-500 group-hover:blur-[1px]" style={{backgroundImage: `url('/images/${image}')`}}></div>
+    <div class="absolute inset-0 lg:group-hover:scale-125 bg-center bg-cover transition-all duration-500 lg:group-hover:blur-[1px]" style={{backgroundImage: `url('/images/${image}')`}}></div>
 
     <div class="self-start place-self-end m-4 p-2 px-4 bg-orange shadow-xl font-semibold text-white relative z-50">{data}</div>
 
@@ -68,12 +68,12 @@ const {title, link, data, image} = Astro.props;
 
       <div class="flex justify-between font-bold uppercase">
         <p class="flex-grow p-4 bg-orange/90">Volta a Ilha Grande</p>
-        <span class="flex justify-center items-center text-[1.2rem] bg-gray-100 text-orange group-hover:bg-orange group-hover:text-white transition-all duration-300 p-4">
+        <span class="flex justify-center items-center text-[1.2rem] bg-gray-100 text-orange lg:group-hover:bg-orange/90 lg:group-hover:text-white transition-all duration-300 p-4">
           <i class="fa-solid fa-chevron-right"></i>
         </span>
       </div>
 
-      <div class="text-gray-700 max-h-0 group-hover:max-h-96 transition-all duration-[600ms] ease-out">
+      <div class="text-gray-700 max-h-0 lg:group-hover:max-h-96 transition-all duration-[1000ms] ease-out">
         <div class="p-6 bg-offwhite">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ea laboriosam quis non quam quasi? Amet numquam nobis doloremque culpa provident, sunt animi totam earum aliquid obcaecati. Totam, commodi eos!
         </div>
