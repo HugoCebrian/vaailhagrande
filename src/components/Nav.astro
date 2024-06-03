@@ -13,11 +13,14 @@
       
       <nav id="menu" class=" md:flex items-center backdrop-blur md:backdrop-blur-none w-[600px]  md:w-auto hidden ">
         <ul class="flex flex-col md:flex-row gap-3 p-10 font-raleway font-semibold md:w-auto md:flex md:gap-4 text-lg md:text-sm">
-          <li class="hover:text-red-400 transition-all"><a href="">Home</a></li>
-          <li class="hover:text-red-400 transition-all"><a href="#voltailha">Volta a Ilha</a></li>
-          <li class="hover:text-red-400 transition-all"><a href="#tragaseuclube">Traga seu Clube</a></li>
-          <li class="hover:text-red-400 transition-all"><a href="#social">Projeto Social</a></li>
-          <li class="hover:text-red-400 transition-all"><a href="">Expedições</a></li>
+          <li class="hover:text-red-600 transition-all group"><a href="">
+            Home
+            <div class="max-w-0 lg:group-hover:max-w-12 h-[1px] transition-all duration-700 ease-in-out bg-red-500"></div>
+          </a></li>
+          <li class="hover:text-orange transition-all"><a href="#voltailha">Volta a Ilha</a></li>
+          <li class="hover:text-orange transition-all"><a href="#tragaseuclube">Traga seu Clube</a></li>
+          <li class="hover:text-orange transition-all"><a href="#social">Projeto Social</a></li>
+          <li class="hover:text-orange transition-all"><a href="">Expedições</a></li>
         </ul>
       </nav>
    
@@ -43,18 +46,3 @@
   
 
 </script>
-
-
-<style>
-  .fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Garante que o cabeçalho fixo fique acima de outros elementos */
-  transition: top 0.10s ease; /* Adiciona uma transição suave quando o cabeçalho se torna fixo */
-}
-
-
-
-</style>
