@@ -10,9 +10,9 @@
     <img class="hidden md:block" src="/images/canoa.png" alt="">
   </div>
 
-  <div class="flex flex-col gap-4 py-20 px-4 md:p-20 lg:p-16">
+  <div class="flex flex-col gap-4 px-4 md:p-20">
     
-    <div class="grid gap-4 auto-rows-min">
+    <div class="grid gap-4 auto-rows-min xl:px-20">
       <div class="">
         <p class="font-semibold font-raleway">Saída</p>
         <h2 class="text-5xl font-bold font-raleway" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">Aulas diárias</h2>
@@ -23,7 +23,7 @@
       </p>
 
       <div class="flex flex-col items-center">
-        <div class="mb-4  border-gray-200">
+        <div class="mb-8  border-gray-200">
           <ul class="flex flex-wrap -mb-px text-sm font-medium text-center justify-center  items-center lg:w-[28rem] bg-white" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-orange transition-all duration-2800 ease-in-out" 
           data-tabs-inactive-classes="text-gray-600 border-gray-100 lg:group-hover:text-orange transition-all" role="tablist">
 
@@ -42,55 +42,54 @@
         </div>
       
         <div class="w-full" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">
+             
           <div class="hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <div class=" gap-4 text-white w-full relative">
-              <div class="flex justify-between items-center gap-6 font-raleway ">
-
-                <div class="flex flex-col gap-4 items-center py-8 w-full">
-                  <div class="flex items-center gap-4 text-gray-600 bg-white px-10 py-2">
-                    <i class="fa-solid fa-sun text-2xl text-orange"></i>
-                    <h1 class="font-semibold text-xl">Manhã</h1>
-                  </div>
-
-                  <div class="flex flex-col gap-2 w-full relative group ">   
-                    <div class="absolute w-full h-full -z-10"></div>
-                    <div class=" flex w-full bg-white">
-                      <div class="w-full flex flex-col items-center gap-4 justify-center font-medium text-gray-600 transition-all py-4">
-                        <p class="">00:00 às 00:00</p>
-                        <div class="w-40 h-[1px] bg-gray-200"></div>
-                        <p class="">00:00 às 00:00</p>
-                        
+                <div class="grid grid-cols-2 gap-4 text-white">
+                  <div class="flex flex-col gap-4 items-center">
+                    <div class="self-end flex text-xl font-semibold  w-full">
+                      <span class="bg-orange w-3/12 py-2 flex justify-center items-center"> <i class="fa-solid fa-sun text-xl"></i></span>
+                      <div class="bg-offwhite w-9/12 py-2 flex justify-center font-semibold text-gray-600">
+                        <h1>Manhã</h1>
                       </div>
+                    </div> 
+                     
+                    <div class="flex flex-col gap-2 w-full relative group">   
+                      <div class="bg-white absolute w-full h-full -z-10"></div>
+                      <div class=" flex w-full">
+                        <div class="w-full py-4 flex flex-col items-center gap-4 justify-center font-medium text-gray-600 group-hover:text-white transition-all ">
+                          <p>00:00 às 00:00</p>
+                          <div class="w-40 h-[1px] bg-gray-200"></div>
+                          <p>00:00 às 00:00</p>
+                        </div>
+                      </div> 
+                      
+                      <div class="w-full h-0 bottom-0 bg-orange absolute group-hover:h-full transition-all duration-700 ease-out -z-10"></div>
                     </div>
                   </div>
                   
-                </div>
-
-                <div class="flex flex-col gap-4 items-center py-8 w-full">
-                  <div class="flex items-center gap-4 text-gray-600  bg-white px-10 py-2">
-                    <i class="fa-solid fa-sunset text-2xl text-orange"></i>
-                    <h1 class="font-semibold text-xl">tarde</h1>
-                  </div>
-
-                  <div class="flex flex-col gap-2 w-full relative group ">   
-                    <div class="absolute w-full h-full -z-10"></div>
-                    <div class=" flex w-full bg-white">
-                      <div class="w-full flex flex-col items-center gap-4 justify-center font-medium text-gray-600 transition-all py-4">
-                        <p class="">00:00 às 00:00</p>
-                        <div class="w-40 h-[1px] bg-gray-200"></div>
-                        <p class="">00:00 às 00:00</p>
-                        
+                  <div class="flex flex-col gap-4 items-center">
+                    <div class="self-end flex text-xl font-semibold  w-full">
+                      <span class="bg-orange w-3/12 py-2 flex justify-center items-center"> <i class="fa-solid fa-sun text-xl"></i></span>
+                      <div class="bg-offwhite w-9/12 py-2 flex justify-center font-semibold text-gray-600">
+                        <h1>Manhã</h1>
                       </div>
-                    </div>
-                  </div>
-                  
-                </div>
+                    </div>  
+                     
+                    <div class="flex flex-col gap-2 w-full">   
 
-                   
-              </div>
-            </div>
+                      <div class=" flex w-full">
+                        <div class="bg-offwhite w-full border py-4 flex flex-col items-center gap-4 justify-center font-medium text-gray-600 text">
+                          <p>00:00 às 00:00</p>
+                          <div class="w-40 h-[1px] bg-gray-200"></div>
+                          <p>00:00 às 00:00</p>
+                        </div>
+                      </div> 
+
+                    </div>
+                  </div>               
+                </div>
           </div>   
-          
+
           <div class="hidden" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
                 <div class="grid grid-cols-2 gap-4 text-white">
                   <div class="flex flex-col gap-4 items-center">
