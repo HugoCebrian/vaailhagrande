@@ -1,4 +1,4 @@
-<header id="header" class="flex flex-col justify-between text-white w-full absolute md:overflow-hidden uppercase">
+<header id="header" class="flex flex-col justify-between text-white w-full absolute md:overflow-hidden uppercase z-50 transition-all">
   
   <div class="flex items-center justify-between border-b border-white/20 h-24 relative z-50">
     <div class="flex justify-between flex-wrap md:flex-nowrap items-center h-full w-full   md:w-auto divide-x divide-white/20">
@@ -17,10 +17,22 @@
             Home
             <div class="max-w-0 lg:group-hover:max-w-12 h-[1px] transition-all duration-700 ease-in-out bg-red-500"></div>
           </a></li>
-          <li class="hover:text-orange transition-all"><a href="#voltailha">Volta a Ilha</a></li>
-          <li class="hover:text-orange transition-all"><a href="#tragaseuclube">Traga seu Clube</a></li>
-          <li class="hover:text-orange transition-all"><a href="#social">Projeto Social</a></li>
-          <li class="hover:text-orange transition-all"><a href="">Expedições</a></li>
+          <li class="hover:text-orange transition-all group"><a href="#voltailha">
+            Volta a Ilha
+            <div class="max-w-0 lg:group-hover:max-w-24 h-[1px] transition-all duration-700 ease-in-out bg-red-500"></div>
+          </a></li>
+          <li class="hover:text-orange transition-all group"><a href="#tragaseuclube">
+            Traga seu Clube
+            <div class="max-w-0 lg:group-hover:max-w-32 h-[1px] transition-all duration-700 ease-in-out bg-red-500"></div>
+          </a></li>
+          <li class="hover:text-orange transition-all group"><a href="#social">
+            Projeto Social
+            <div class="max-w-0 lg:group-hover:max-w-32 h-[1px] transition-all duration-700 ease-in-out bg-red-500"></div>
+          </a></li>
+          <li class="hover:text-orange transition-all group"><a href="">
+            Expedições
+            <div class="max-w-0 lg:group-hover:max-w-24 h-[1px] transition-all duration-700 ease-in-out bg-red-500"></div>
+          </a></li>
         </ul>
       </nav>
    
@@ -43,6 +55,30 @@
 
 <script>
 
-  
+const header = document.getElementById('header');
+let isHeaderFixed = false;
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const section = document.getElementById('voltailha');
+
+    if (section) {
+        const sectionPosition = section.offsetTop;
+
+        if (scrollPosition >= sectionPosition && !isHeaderFixed) {
+            header?.classList.add('fixed', 'bg-shape', 'transition-all', 'duration-500');
+            header?.classList.remove('absolute');
+            isHeaderFixed = true;
+        } else if (scrollPosition < sectionPosition && isHeaderFixed) {
+            header?.classList.remove('fixed', 'bg-shape');
+            header?.classList.add('absolute',);
+            isHeaderFixed = false;
+        }
+    }
+});
+
+
+
+
 
 </script>
