@@ -1,25 +1,37 @@
 ---
 import SlideSocial from "./SlideSocial.astro";
 ---
-<section id="voltailha" class="lg:grid lg:grid-cols-2 relative ">
+<section id="social" class="relative">
+
+  <div class="bg-[url('/images/txtw.png')] bg-left bg-cover w-full h-full absolute -z-20 opacity-20"></div>
   
-  <div class="flex flex-col px-4 md:p-20 relative">
-      <div class="text-gray-600 flex flex-col gap-10" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-        <div class=" flex flex-col gap-4">
+  <div class="lg:grid lg:grid-cols-2 relative px-8 py-24 md:p-16 lg:py-24 xl:p-32 gap-28">
+    <div class="flex flex-col md:flex-row lg:flex-col relative pb-10 lg:pb-0 gap-10">
+       <div class="text-offblack flex flex-col gap-10" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
+         <div class=" flex flex-col gap-4">
           <div class="">
-            <h2 class="text-4xl md:text-5xl font-bold">Projeto Social</h2>
+            <h2 class="text-4xl md:text-5xl font-semibold">Projeto Social</h2>
           </div>
-          <p class="font-light">Reme com nossos alunos e aprenda mais sobre a VA'A em uma aula de uma  hora!</p>
+          <p class="font-light"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolore consequuntur unde nisi laboriosam, sunt labore iste nemo eveniet earum tempore eos sed vitae. </p>
+          </div>
+       </div>
+     
+        <div class="flex flex-col gap-8">
+          <div class="bg-white shadow-sm p-8 flex justify-center">
+            <div class="flex items-center gap-10 text-orange">
+              <h1 class="font-semibold text-3xl lg:text-5xl">26.000</h1>
+             <p class="text-sm lg:text-md font-light text-offblack">Lorem ipsum dolor sit, amet consectetur adipisicing elit? </p>
+            </div>
+          </div>
+          <span class="w-full h-16 shadow-sm bg-white"></span>
+  
         </div>
-        <div>
-          <p class="font-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae esse cumque quibusdam similique magnam? Ex consectetur tempora non fugit omnis.</p>
-        </div>
-      </div>
-  </div>
+    </div>
   
 
-  <div class="w-full h-full relative">
+    <div class="w-full h-full relative">
     <SlideSocial/>
+    </div>
   </div>
 
 </section>
