@@ -77,8 +77,35 @@ window.addEventListener('scroll', () => {
     }
 });
 
+const menu = document.getElementById('menu');
+const btn = document.getElementById('btn');
 
-
-
+btn.addEventListener('click', function() {
+  menu.classList.toggle('hidden');
+  btn.classList.toggle('active'); // Adiciona ou remove a classe 'active' ao botão
+});
 
 </script>
+
+
+
+<style>
+  #btn .line {
+  width: 32px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.4s ease-out;
+}
+
+#btn.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 7px);
+}
+
+#btn.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+#btn.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -7px);
+}
+</style>

@@ -62,7 +62,7 @@ const {title, link, data, image} = Astro.props;
 
     <div class="absolute inset-0 lg:group-hover:scale-125 bg-center bg-cover transition-all duration-500 lg:group-hover:blur-[0px]" style={{backgroundImage: `url('/images/${image}')`}}></div>
 
-    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-80 transition-opacity duration-700"></div>
+    <div class="absolute inset-0 bg-black opacity-0 lg:group-hover:opacity-80 transition-opacity duration-700"></div>
 
     <div class="self-start place-self-end m-4 p-2 px-4 bg-orange shadow-xl font-semibold text-white relative z-10">{data}</div>
 
@@ -75,7 +75,7 @@ const {title, link, data, image} = Astro.props;
         </span>
       </div>
 
-      <div class="text-offblack max-h-0 lg:group-hover:max-h-96 xl:group-hover:max-h-[28rem] transition-all duration-700 ease-in-out font-light">
+      <div class="text-offblack max-h-0 lg:group-hover:max-h-96 transition-all duration-700 ease-in-out font-light">
         <div class="p-6 bg-offwhite">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ea laboriosam quis non quam quasi? Amet numquam nobis doloremque culpa provident, sunt animi totam earum aliquid obcaecati. Totam, commodi eos!
         </div>
