@@ -20,7 +20,7 @@
      
       <div class="absolute z-10 inset-0 bg-gradient-to-b from-gray-950/80 via-gray-950/10 to-gray-950/80"></div>
       
-      <video autoplay muted loop class="hidden md:block absolute inset-0 w-screen h-screen object-cover -z-40" poster="/images/video.png">
+      <video muted loop class="hidden md:block absolute inset-0 w-screen h-screen object-cover -z-40" poster="/images/video.png">
         <source class="hidden"  src="https://www.goinitium.com/wp-content/uploads/2024/04/DJI-0615.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg">
       </video>
@@ -63,6 +63,41 @@
       });
     });
   }
+
+  // Definindo manualmente o tipo LenisEvent baseado nos dados esperados
+  interface LenisEvent {
+      scrollY: number;
+      // Adicione outras propriedades que você espera aqui
+    }
+
+
+    import Lenis from 'lenis'
+
+    // Criando uma instância de Lenis com as configurações especificadas
+    const lenis = new Lenis({
+      duration: 1.6,
+      easing: (t: number): number => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    // Tipando o evento de rolagem como LenisEvent
+    lenis.on('scroll', (e: LenisEvent) => {
+      console.log(e.scrollY);
+    });
+
+    // Função de requestAnimationFrame
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    // Iniciando a animação
+    requestAnimationFrame(raf);
 
 
 </script>
