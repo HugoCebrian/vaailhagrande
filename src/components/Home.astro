@@ -1,11 +1,6 @@
 ---
 import Card from './Card.astro';
 import CardSlide from './CardSlide.astro';
-const res = await fetch('http://137.184.122.253:8055/items/Home_cards');
-const cards = await res.json();
-const card1 = cards.data[0];
-const card2 = cards.data[1];
-const card3 = cards.data[2];
 
 ---
 
@@ -32,21 +27,21 @@ const card3 = cards.data[2];
      <div class="hidden md:hidden lg:grid md:grid-cols-3 divide-x border-t divide-white/20 border-white/20 absolute bottom-0 z-50">
       <Card
       subtitle='Expedições' 
-      title={card1.title} 
+      title="ola" 
       paragraph='Embarque em uma emocionante expedição de canoa polinésia, desbravando aguas cristalinas e visuais paradisíacos' 
       icon='fa-solid fa-ship' 
       link=''
      />      
      <Card 
       subtitle='Passeios'
-      title={card2.title}
+      title="ola" 
       paragraph='Explore os encantos naturais da região por meio de passeios' 
       icon='fa-solid fa-island-tropical' 
       link=''
      />    
      <Card 
       subtitle='Aulas' 
-      title={card3.title}
+      title="ola" 
       paragraph='Receba aula com nossos experientes instrutores' 
       icon='fa-solid fa-umbrella-beach' 
       link=''
